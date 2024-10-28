@@ -9,6 +9,7 @@ const Home = () => {
     <main className="home">
       <Helmet>
         <title>Home | AppPelículas</title>
+        <link rel="canonical" href={`demo-contentful-and-seo.vercel.app`} />
       </Helmet>
       <h1 className="home__title">Home</h1>
       <p className="home__description">This is the Home page</p>

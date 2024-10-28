@@ -39,7 +39,6 @@ const Pelicula = () => {
         <meta name="description" content={description} />
         <meta name ="rating" content="General"/>
         <meta name="robots" content="index, follow" />
-        <link rel="canonical" href={`https://app-peliculas.vercel.app/pelicula/${entryId}`} />
       </Helmet>
       <figure className="pelicula__image">
         <img src={pelicula?.image} alt={`Póster de la película ${pelicula?.title}`} />

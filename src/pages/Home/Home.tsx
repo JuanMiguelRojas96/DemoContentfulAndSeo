@@ -10,6 +10,7 @@ const Home = () => {
       <Helmet>
         <title>Home | AppPelículas</title>
         <link rel="canonical" href={`demo-contentful-and-seo.vercel.app`} />
+        <meta name="robots" content="index, follow"></meta>
       </Helmet>
       <h1 className="home__title">Home</h1>
       <p className="home__description">This is the Home page</p>

@@ -1,2 +1,4 @@
 User-agent: Googlebot
 Disallow: /clients/
+
+Sitemap: https://demo-contentful-and-seo.vercel.app/sitemap.xml

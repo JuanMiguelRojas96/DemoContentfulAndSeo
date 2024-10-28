@@ -22,7 +22,8 @@
     "react-helmet": "^6.1.0",
     "react-helmet-async": "^2.0.5",
     "react-router-dom": "^6.27.0",
-    "sass": "^1.80.4"
+    "sass": "^1.80.4",
+    "sitemap": "^8.0.0"
   },
   "devDependencies": {
     "@eslint/js": "^9.9.0",

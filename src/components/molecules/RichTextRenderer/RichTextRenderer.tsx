@@ -11,9 +11,9 @@ const RichTextRenderer = ({ richTextDocument }) => {
       [MARKS.UNDERLINE]: (text: any) => <u>{text}</u>,
     },
     renderNode: {
-      [BLOCKS.HEADING_1]: (node, children: any) => <h1>{children}</h1>,
-      [BLOCKS.HEADING_2]: (node, children: any) => <h2>{children}</h2>,
-      [BLOCKS.PARAGRAPH]: (node, children: any) => <p>{children}</p>,
+      [BLOCKS.HEADING_1]: (_node: any, children: any) => <h1>{children}</h1>,
+      [BLOCKS.HEADING_2]: (_node: any, children: any) => <h2>{children}</h2>,
+      [BLOCKS.PARAGRAPH]: (_node: any, children: any) => <p>{children}</p>,
       [BLOCKS.EMBEDDED_ASSET]: (node: any) => {
         const { file, title } = node.data.target.fields;
         return <img src={file.url} alt={title} />;

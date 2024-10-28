@@ -1,18 +1,20 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
 import { BLOCKS, MARKS } from "@contentful/rich-text-types";
 
+/* @ts-expect-error: Contentful rich text renderer types are not compatible with React */
 const RichTextRenderer = ({ richTextDocument }) => {
   const options = {
     renderMark: {
-      [MARKS.BOLD]: (text) => <strong>{text}</strong>,
-      [MARKS.ITALIC]: (text) => <em>{text}</em>,
-      [MARKS.UNDERLINE]: (text) => <u>{text}</u>,
+      [MARKS.BOLD]: (text: any) => <strong>{text}</strong>,
+      [MARKS.ITALIC]: (text: any) => <em>{text}</em>,
+      [MARKS.UNDERLINE]: (text: any) => <u>{text}</u>,
     },
     renderNode: {
-      [BLOCKS.HEADING_1]: (node, children) => <h1>{children}</h1>,
-      [BLOCKS.HEADING_2]: (node, children) => <h2>{children}</h2>,
-      [BLOCKS.PARAGRAPH]: (node, children) => <p>{children}</p>,
-      [BLOCKS.EMBEDDED_ASSET]: (node) => {
+      [BLOCKS.HEADING_1]: (node, children: any) => <h1>{children}</h1>,
+      [BLOCKS.HEADING_2]: (node, children: any) => <h2>{children}</h2>,
+      [BLOCKS.PARAGRAPH]: (node, children: any) => <p>{children}</p>,
+      [BLOCKS.EMBEDDED_ASSET]: (node: any) => {
         const { file, title } = node.data.target.fields;
         return <img src={file.url} alt={title} />;
       },

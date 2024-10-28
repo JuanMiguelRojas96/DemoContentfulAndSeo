@@ -1,0 +1,16 @@
+.home {
+  width: 100%;
+  margin: 0;
+  padding: 20px;
+  box-sizing: border-box; 
+
+  &__title {
+    text-align: center;
+    font-size: 2rem;
+  }
+
+  &__description {
+    text-align: center;
+    font-size: 1.2rem;
+  }
+}
